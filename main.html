@@ -1,0 +1,134 @@
+<!--
+
+ * User: brandonxavier(brandonxavier421@gmail.com)
+ * Date: ${DATE}
+ *
+
+ Copyright 2013 Brandon Xavier (brandonxavier421@gmail.com)
+
+ This file is part of ${PRODUCT_NAME}.
+
+ ${PRODUCT_NAME} is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ ${PRODUCT_NAME} is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with ${PRODUCT_NAME}.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <title>CB App Dev</title>
+    <link rel='stylesheet' type='text/css' href='./main.css'>
+    <SCRIPT src="./jquery-2.0.3.js"></SCRIPT>
+
+</head>
+
+<body>
+
+<DIV id='Script' title='Script & Init Function'>
+    <input type='file' id='inFileList'>
+    <LABEL>Init function:</LABEL>
+    <SELECT id="lstFunctions"></SELECT>
+    <BUTTON id="btnOK" onClick='okBtnClicked()'>OK</BUTTON>
+</DIV>
+
+<DIV id='Startup' title='Startup'>
+    <DIV id='Settings'>
+
+    </DIV>
+    <DIV id='Activate'>
+        <DIV STYLE='vertical-align: middle;text-align:center; float: none;border:0;display:table-cell;'>
+            <BUTTON id='btnActivate' class='button' onclick='btnActivateClicked()'>Activate</BUTTON>
+        </DIV>
+    </DIV>
+</DIV>
+
+<DIV id='Subject' title='Subject & Panels'>
+    <TEXTAREA id='txtSubject'></TEXTAREA>
+    <BUTTON class='button' id='btnSubject' onclick='cb.subjectChangeClicked()'>Change</BUTTON>
+
+
+    <TABLE id='panelTable'>
+
+        <tr>
+            <TH>Broadcaster Panel:</TH>
+            <TH>User Panel:</TH>
+        </tr>
+
+        <tr>
+
+            <TD class='panelColumn'>
+                <DIV class='innerTable'>
+                    <TABLE cellpadding='0' cellspacing='0' border='0'>
+                        <TR class='panelOddRow' id='brow1'></TR>
+                        <TR class='panelEvenRow' id='brow2'></TR>
+                        <TR class='panelOddRow' id='brow3'></TR>
+                    </TABLE>
+                </DIV>
+
+            </TD>
+
+            <TD class='panelColumn'>
+                <DIV class='innerTable'>
+                    <TABLE cellpadding='0' cellspacing='0' border='0'>
+                        <TR class='panelOddRow' id='urow1'></TR>
+                        <TR class='panelEvenRow' id='urow2'></TR>
+                        <TR class='panelOddRow' id='urow3'></TR>
+                    </TABLE>
+                </DIV>
+
+            </TD>
+        </tr>
+
+    </TABLE>
+</DIV>
+
+<DIV id="Broadcaster" title="Broadcaster Chat">
+    <DIV id='txtBroadcaster' class='textareas'></DIV>
+
+    <INPUT type='text' class='inputAreas' id='inBroadcaster' onkeydown='return press (event)'>
+    <BUTTON class='button' id='btnBroadcaster' onclick='cb.sendClicked("inBroadcaster")'>Send
+    </BUTTON>
+
+</DIV>
+
+<DIV id="User" title="User Chat">
+    <DIV id="txtUserChat" class='textareas'></DIV>
+    <SELECT id='lstUsers' onchange='userChanged()'></SELECT>
+    <INPUT type='text' class='inputAreas' id='inUser' onkeydown='return press (event)'>
+    <BUTTON class='button' id='btnUser' onclick="cb.sendClicked('inUser')">Send</BUTTON>
+</DIV>
+
+<DIV id='Tip' title='Tipping Window'>
+    <DIV id='Tipping'>
+    </DIV>
+    <DIV id='SendTip'>
+        <DIV STYLE='vertical-align: middle;text-align:center; float: none;border:0;display:table-cell;'>
+            <BUTTON id='btnTip' class='button' onclick='sendTipClicked()'>Send Tip</BUTTON>
+        </DIV>
+    </DIV>
+</DIV>
+
+<DIV id='Log' title='Logged Output'>
+    <DIV id='txtLog' class='textareas'></DIV>
+</DIV>
+
+
+<SCRIPT src="ObjCB.js"></SCRIPT>
+
+<SCRIPT>cbInit( "", "" )</SCRIPT>
+
+</body>
+</html>

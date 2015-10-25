@@ -1,0 +1,349 @@
+/**
+ * Created with JetBrains WebStorm
+ * User: brandonxavier (brandonxavier421@gmail.com)
+ * Date: 6/20/13
+ *
+
+ Copyright 2013 Brandon Xavier (brandonxavier421@gmail.com)
+
+ This file is part of CB-AppDevKit.
+
+ CB-AppDevKit is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ CB-AppDevKit is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with CB-AppDevKit.  If not, see <http://www.gnu.org/licenses/>.
+
+ */
+
+/*
+
+    TODO:   Cleanup and simplify the css -- unfortunately, css
+            just doesn't come naturally to me. Maybe someday
+            I'll take a few days, throw away everything I think
+            I know about css and relearn it from scratch.  But
+            not today . . .
+
+ */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+div {
+    border: 1px solid black;
+    float: left;
+    width: 48%;
+    height: 30%;
+    margin: 5px;
+}
+
+#Settings, #Tipping {
+    width: 84%;
+    height: 95%;
+    overflow-y: scroll;
+    border: 0;
+    margin: 0;
+    padding-top: 10px;
+}
+
+#Activate, #SendTip {
+    width: 14%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 4px;
+    float: none;
+    vertical-align: middle;
+    display: table;
+}
+
+#Subject {
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+#Script {
+    width: 48%;
+    height: 25px;
+    margin: 5px;
+    margin-right: 125px;
+}
+
+.textareas {
+    resize: none;
+    width: 95%;
+    height: 65%;
+    margin: 13px;
+    overflow-y: scroll;
+    display: block;
+    font-family: monospace;
+
+}
+
+#panelTable {
+    font-family: 'UbuntuRegular', Arial, Helvetica, sans-serif;
+    width: 660px;
+    height: 117px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 13px;
+    margin: 13px;
+    text-align: center;
+    font-size: 62.5%;
+
+}
+
+#panelTable th, .panelColumn {
+    width: 311px;
+    height: 18px;
+    border: 1px solid black;
+    padding: 2px;
+    margin: 5px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+}
+
+.panelHeadings {
+    width: 45%;
+    height: 20%;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+
+}
+
+.panelColumn {
+    height: 80px;
+    margin-top: 0;
+    overflow-y: hidden;
+}
+
+.panelOddRow {
+    min-width: 270px;
+    height: 23px;
+    margin: 0;
+    background-color: #d5ebf8;
+    border: 0;
+    display: table-row;
+}
+
+.panelEvenRow {
+    min-width: 270px;
+    height: 23px;
+    max-height: 46px;
+    margin: 0;
+    background-color: #f2f9fd;
+    border: 0;
+}
+
+.innerTable {
+    width: 267px;
+    height: 70px;
+    border: 0;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-table;
+    float: none;
+    padding: 0;
+    vertical-align: middle;
+}
+
+/* .leftColumn, .rightColumn, .topLeftColumn, .singleColumn { */
+.leftColumn, .rightColumn, .topLeftColumn {
+    font-size: 100.01%;
+    height: 16px;
+    line-height: 16px;
+    width: 130px;
+    max-width: 130px;
+    vertical-align: middle;
+    padding: 0;
+    float: none;
+}
+
+.leftColumn {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 0;
+}
+
+.topLeftColumn {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 0;
+    color: #057205;
+    font-size: 94%;
+}
+
+.rightColumn {
+    width: 130px;
+    /* display: inline-table; */
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 2px;
+}
+
+.singleColumn, .singleTopColumn {
+    padding: 0;
+    margin: 0;
+    max-width: 267px;
+    max-height: 46px;
+    width: 255px;
+    text-align: center;
+    border: 0;
+    word-wrap: normal;
+    overflow-y: visible;
+    font-weight: normal;
+}
+
+.singleTopColumn {
+    font-weight: bold;
+    max-height: 23px;
+    overflow-y: hidden;
+}
+
+.inputAreas {
+    resize: none;
+    width: 80%;
+    height: 10%;
+    margin: 13px;
+}
+
+.button {
+    font-size: 12px;
+    width: 60px;
+    margin: 13px auto;
+}
+
+#txtSubject {
+    resize: none;
+    margin: 13px;
+    width: 80%;
+    height: 20%;
+    color: black;
+}
+
+#txtUserChat {
+    color: green;
+}
+
+#txtLog {
+    width: 95%;
+    height: 90%;
+    color: red;
+}
+
+#txtBroadcaster {
+    color: blue;
+}
+
+#btnSubject {
+    vertical-align: top;
+}
+
+#btnActivate {
+    vertical-align: middle;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+#btnSendTip {
+    vertical-align: bottom;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+#lstUsers {
+    float: left;
+    margin: 13px;
+}
+
+#lstTipping {
+    width: 125px;
+}
+
+#inUser {
+    width: 65%;
+}
+
+.settingLabel, .tipLabel {
+    width: 47%;
+    height: 48px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    padding-right: 2px;
+    text-align: right;
+    display: block;
+
+}
+
+.settingInput {
+    /* Just an empty class for selector purposes */
+}
+
+.settingField, .errorLabel, .tipField {
+    width: 47%;
+    height: 48px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 2px;
+    text-align: left;
+    float: right;
+}
+
+.tipField, #inTipNote {
+    height: 20px;
+    width: 80px;
+    float: none;
+    display: block;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.tipLabel {
+    height: 20px;
+    margin: 5px;
+}
+
+#inTipNote {
+    width: 242px;
+    height: 69px;
+    display: block;
+    resize: none;
+    float: none;
+}
+
+.errorLabel {
+    height: 16px;
+    width: 90%;
+    color: red;
+    display: block;
+    float: none;
+    font-size: 11px;
+}
